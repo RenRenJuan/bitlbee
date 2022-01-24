@@ -777,9 +777,11 @@ int irc_check_login(irc_t *irc)
 			            "If you've never used BitlBee before, please do read the help "
 			            "information using the \x02help\x02 command. Lots of FAQs are "
 			            "answered there.\n"
-			            "If you already have an account on this server, just use the "
-			            "\x02identify\x02 command to identify yourself.",
-			            PACKAGE, BITLBEE_VERSION);
+			            "DS SSO applied, the sameboat user nickspace overrides the local one, identify_methods are for guest users.\n"
+                        "Guest accounts are purged after being disconnected beyond a short time limit.\n\n"
+                        "The domain space help function is in #%s where the system agent JuanDaugherty will assist you.\n"
+                        "You do not need to use this control channel if you're only here for that. See the status tab/window.\n\n",
+			            PACKAGE, BITLBEE_VERSION, irc->user->nick );
 
 			/* This is for bug #209 (use PASS to identify to NickServ). */
 			if (irc->password != NULL) {
