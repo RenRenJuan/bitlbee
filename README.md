@@ -5,7 +5,11 @@
 
 ## 3.6.1
    
- Accept the nick and channel from a HTTP connect to Bitlbee.
+ Accept the nick and channel from a qwebirc when it connects to Bitlbee.
+ Unsure ATM how I will send it, will try to make it generally usable or 
+ remove this from github.
+
+
 
 
 
